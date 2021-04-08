@@ -1,5 +1,5 @@
 PYTHON DJANGO 
-Créer la base de donnée “database.sql” dans Phpmyadmin
+Créer la base de données “database.sql” dans Phpmyadmin
 Dans le terminal, aller dans le dossier de l’environnement virtuel avec cette commande : cd projectspython
 L’activer : source bin/activate 
 Création d’un projet django : Django-admin startproject nomprojet 
