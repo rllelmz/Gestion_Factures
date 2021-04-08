@@ -1,0 +1,20 @@
+{% extends 'homepagecat_template.html' %}
+{% block title %}
+Modifier catégorie
+{% endblock title %}
+{% block content %}
+   <div class="mt-5">
+    <h4 class="h4-responsive text-center" style="color: #ffffff;font-family: 'Lobster',cursive;">Modification de la categorie</h4>
+    <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+       <form method="POST" action="">
+           {% csrf_token %}
+           <div class="mt-5">
+           {{form}}
+           </div>
+           <br><button type="submit" class="btn btn-info">Modifier</button>
+       </form>
+    </div>
+    </div>
+   </div>
+{% endblock content %}

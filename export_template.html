@@ -1,0 +1,20 @@
+{% extends 'homepage_template.html' %}
+{% block title %}
+Exporter facture
+{% endblock title %}
+
+{% block content %}
+    <div class="mt-5">
+       <h4 class="h4-responsive text-center" style="color: #ffffff;font-family: 'Lobster',cursive;">Exporter en</h4>
+       <form method="POST" action="">
+           {% csrf_token %}
+           <div class="col-4">
+           <select class="form-select form-select-sm" name="file">
+               <option>Format...</option>
+               <option>CSV</option>
+           </select>
+           </div>
+           <br><button type="submit" class="btn btn-warning">Exporter</button>
+       </form>
+    </div>
+{% endblock content %}

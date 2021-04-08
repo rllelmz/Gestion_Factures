@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css--->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_home.css' %}">
+    <link href=" {% static 'css/css_googleapis.css' %}" rel="stylesheet">
+    <link href=" {% static 'https://fonts.googleapis.com/css?family=Quicksand&display=swap' %}">
+    <!--js-->
+    <script src="{% static 'js/script_home.js' %}" defer></script>
+    <title>{% block title %}Accueil{% endblock title %}</title>
+</head>
+<body style="background-color: #83b5f7;">
+    <div class="mt-5">
+        <h1 class="h1-responsive text-center" style="color: #ffffff;font-family: 'Lobster',cursive; font-size: 45px;">Bienvenue sur TrackBillSmart</h1> 
+    </div>
+    <br><br><br><br>
+      
+    <div class="container rounded" style="background-color: #b1d7f7; position: relative; font-family: 'Quicksand', sans-serif; height: 550px;">
+        <div class="wrapper">
+            <ul class="container-onglets">
+              
+              <a href="{% url 'homepagecat' %}">
+                <button class="favorite styled" type="button">
+                Ensemble des catégories
+                </button>
+              </a>
+      
+              <a href="{% url 'addcat' %}">
+                <button class="favorite styled" type="button">
+                Ajouter une catégorie
+                </button>
+              </a>
+      
+              <a href="{% url 'home' %}">
+                <button class="favorite styled" type="button">
+                Ensemble des factures
+                </button>
+              </a>
+      
+              <a href="{% url 'add' %}">
+                <button class="favorite styled" type="button">
+                Ajouter une facture
+                </button>
+              </a>
+      
+              <a href="{% url 'export' %}">
+                <button class="favorite styled" type="button">
+                Exporter
+                </button>
+              </a>
+      
+              <a href="{% url 'import' %}">
+                <button class="favorite styled" type="button">
+                Importer
+                </button>
+              </a>
+            </ul>
+          </div>
+      {% block content %}
+      <div class="row text-center padding" style="color: #ffffff;">
+        <div class="col-xs-6 mt-2">
+            <br><br><br><br><br><br><br><br><p>Bienvenue sur TrackBillSmart. Cette application va vous permettre de gérer vos factures plus facilement
+               avec les différentes fonctionnalités dévelopées par notre équipe. Nous espérons que vous allez aimer notre site.
+            </p>
+        </div>
+    </div>
+      {% endblock %}
+  </div>
+</body>
+</html>

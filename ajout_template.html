@@ -1,0 +1,22 @@
+{% extends 'homepage_template.html' %}
+{% block title %}
+Ajout facture
+{% endblock title %}
+
+{% block content %}
+
+   <div class="mt-5">
+       <h4 class="h4-responsive text-center" style="color: #ffffff; font-family: 'Lobster',cursive;">Nouvelle Facture</h4>
+       <div class="row justify-content-md-center">
+        <div class="col-xs-12">
+         <form method="POST" action="">
+           {% csrf_token %}
+           <div class="mt-3 mb-3">
+           {{form}}
+           </div>
+           <br><button type="submit" class="btn btn-success">Ajouter</button>
+         </form>
+        </div>
+       </div>
+   </div>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'homepage_template.html' %}
+{% block title %}
+Importer facture
+{% endblock title %}
+
+{% block content %}
+<div class="mt-5">
+    <h4 class="h4-responsive text-center" style="color: #ffffff;font-family: 'Lobster',cursive;">Importer</h4>
+    <form method="POST" enctype="multipart/form-data">
+    <div class="col-4">
+        <div class="mb-3">
+           {% csrf_token %}
+           <label for="name">Selectionner un fichier : </label>
+           <input class="form-control form-control-sm" type="file" name="csv_file" required="True">
+           <br><button type="submit" class="btn btn-warning">Importer</button>
+        </div>
+    </div>
+    </form>
+</div>
+{% endblock content %}

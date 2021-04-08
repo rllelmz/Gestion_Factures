@@ -1,0 +1,15 @@
+{% extends 'homepage_template.html' %}
+{% block title %}
+Supprimer facture
+{% endblock title %}
+{% block content %}
+   <div class="mt-5">
+     <h4 class="h4-responsive text-center" style="color: #ffffff;font-family: 'Lobster',cursive;">Supprimer cette facture?</h4>
+      <div class="row justify-content-md-center">
+       <form method="POST" action="">
+        {% csrf_token %}
+        <br><button type="submit" class="btn btn-danger">Supprimer</button>
+    </form>
+    </div>
+   </div>
+{% endblock content %}
